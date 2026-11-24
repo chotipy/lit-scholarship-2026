@@ -13,6 +13,7 @@
             <a href="#home" class="logo">Balqis.</a>
             <ul class="nav-links">
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -23,9 +24,9 @@
 
         <section class="hero" id="home">
             <p class="hero-tag">LIT Scholarship 2026 · Full Stack Track</p>
-            <h1>Balqis here hehehehe</h1>
+            <h1>💗</h1>
             <p class="hero-text">
-                An aspiring software engineer from Bali, learning to build from scratch again
+                An aspiring software engineer from Jakarta, learning to build from scratch again
             </p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Say Hello</a>
@@ -62,6 +63,21 @@
                     <p>Saving my progress with commits and pushing to GitHub.</p>
                 </div>
             </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <p class="section-subtitle">Things I have built</p>
+
+            <a href="https://adapenyu.com" target="_blank" class="card project-card">
+                <div class="card-icon">🐢</div>
+                <div class="project-info">
+                    <p class="project-label">Latest Project</p>
+                    <h3>adapenyu.com</h3>
+                    <p>Help!</p>
+                </div>
+                <span class="project-link">Visit ↗</span>
+            </a>
         </section>
 
         <section class="section" id="about">
@@ -101,7 +117,7 @@
                 <button type="submit" class="btn btn-primary">Send Message</button>
 
 
-                <p class="form-success" id="formSuccess" hidden>Thank you! Your message has been sent 💌</p>
+                <p class="form-success" id="formSuccess" hidden>Thank you! Your email app should open now, just press send 💌</p>
             </form>
         </section>
 
@@ -111,7 +127,7 @@
         <div class="footer-links">
             <a href="https://github.com/chotipy" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/balqismuharda/" target="_blank">LinkedIn</a>
-            <a href="balqis.muharda@gmail.com">Email</a>
+            <a href="mailto:balqis.muharda@gmail.com">Email</a>
         </div>
         <p>2026. Made with HTML, CSS and lots of coffee. I havent even sleep :<</p>
     </footer>
@@ -122,6 +138,18 @@
 
         form.addEventListener("submit", function (event) {
             event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // open the email app with the message already filled in
+            const subject = "Hello from " + name;
+            const body = message + "\n\nFrom: " + name + " (" + email + ")";
+            window.location.href = "mailto:balqis.muharda@gmail.com"
+                + "?subject=" + encodeURIComponent(subject)
+                + "&body=" + encodeURIComponent(body);
+
             successMessage.hidden = false;
             form.reset();
         });
