@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balqis | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Balqis.</a>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <p class="hero-tag">LIT Scholarship 2026 · Full Stack Track</p>
+            <h1>Balqis here hehehehe</h1>
+            <p class="hero-text">
+                An aspiring software engineer from Bali, learning to build from scratch again
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Say Hello</a>
+                <a href="#skills" class="btn btn-secondary">See My Thing :> </a>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+            <p class="section-subtitle">Things I have learned so far (and still learning!)</p>
+
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="card-icon">🧱</div>
+                    <h3>HTML</h3>
+                    <p>Building the structure of a web page with semantic tags.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Making pages look nice with colors, flexbox and grid.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">☕</div>
+                    <h3>Java</h3>
+                    <p>Variables, Scanner input, ArrayList and HashMap basics.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Saving my progress with commits and pushing to GitHub.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Me</h2>
+
+            <div class="about-box">
+                <div class="about-photo">B</div>
+
+                <div class="about-text">
+                    <p>
+                        I'm Balqis, 22 years old and based in Bali, Indonesia.
+                        Right now I'm part of the LIT Scholarship 2026 program,
+                        where I'm learning full stack development from the ground up.
+                    </p>
+                    <p>
+                        My goal is to become rich honestly
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <p class="section-subtitle">Have a question or just want to say hi? Send me a message!</p>
+
+            <form class="contact-form" id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+
+
+                <p class="form-success" id="formSuccess" hidden>Thank you! Your message has been sent 💌</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/chotipy" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#contact">Email</a>
+        </div>
+        <p>&copy; 2026 Balqis. Made with HTML, CSS and lots of coffee.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("formSuccess");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            successMessage.hidden = false;
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
