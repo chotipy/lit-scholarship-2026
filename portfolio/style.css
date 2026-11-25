@@ -19,7 +19,7 @@
 }
 
 /* dark mode */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         --background: var(--crimson-violet);
         --card: rgba(127, 5, 95, 0.35);
